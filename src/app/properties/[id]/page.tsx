@@ -1,7 +1,8 @@
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PropertyDetails } from "@/components/sections/property-details";
-import { properties }_data from "@/lib/properties-data";
+import { properties_data } from "@/lib/properties-data";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
