@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function About() {
   return (
-    <section id="about" className="py-16 sm:py-24">
+    <section id="about" className="py-16 sm:py-24 bg-secondary">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -17,7 +17,7 @@ export function About() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-           <Card className="bg-card/50">
+           <Card className="bg-card">
             <CardHeader className="flex-row items-center gap-4">
               <History className="w-8 h-8 text-accent" />
               <CardTitle>Notre Histoire</CardTitle>
@@ -26,7 +26,7 @@ export function About() {
               <p className="text-foreground/80">La coopérative est fondée en 2025, CHA-TEA est née de la volonté de créer une alternative durable et solidaire au marché immobilier traditionnel pour les Sénégalais et immigrés.</p>
             </CardContent>
           </Card>
-          <Card className="bg-card/50">
+          <Card className="bg-card">
             <CardHeader className="flex-row items-center gap-4">
               <Target className="w-8 h-8 text-accent" />
               <CardTitle>Notre Mission</CardTitle>
@@ -35,7 +35,7 @@ export function About() {
               <p className="text-foreground/80">Faciliter l'accès au logement et proposer des terrains de 150 à 225 m² pour des projets immobiliers.</p>
             </CardContent>
           </Card>
-          <Card className="bg-card/50">
+          <Card className="bg-card">
             <CardHeader className="flex-row items-center gap-4">
               <Eye className="w-8 h-8 text-accent" />
               <CardTitle>Notre Vision</CardTitle>
