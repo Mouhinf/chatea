@@ -23,7 +23,7 @@ export function Hero() {
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
-            <Link href="#properties">
+            <Link href="/properties">
               Voir nos propriétés
             </Link>
           </Button>

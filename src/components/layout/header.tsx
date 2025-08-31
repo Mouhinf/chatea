@@ -19,7 +19,7 @@ import { Logo } from "@/components/logo";
 
 const navLinks = [
   { href: "/cooperative", label: "Coopérative" },
-  { href: "/#properties", label: "Propriétés" },
+  { href: "/properties", label: "Propriétés" },
   { href: "/#membership", label: "Adhésion" },
   { href: "/#contact", label: "Contact" },
 ];

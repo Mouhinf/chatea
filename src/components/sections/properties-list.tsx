@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BedDouble, Bath, Ruler, Trees } from "lucide-react";
-import Link from "next/link";
 
 const properties = [
   {
@@ -17,6 +15,15 @@ const properties = [
     price: "15 000 000 FCFA",
     area: 150,
     isNew: true,
+  },
+  {
+    title: "Terrain Résidentiel à Lac Rose",
+    type: "Terrain",
+    image: "https://picsum.photos/600/400?random=2",
+    hint: "residential land",
+    price: "22 000 000 FCFA",
+    area: 200,
+    isNew: false,
   },
   {
     title: "Appartement T3 à Dakar",
@@ -49,33 +56,56 @@ const properties = [
     area: 180,
     isNew: false,
   },
+   {
+    title: "Studio moderne à Ngor",
+    type: "Appartement",
+    image: "https://picsum.photos/600/400?random=6",
+    hint: "modern studio ngor",
+    price: "Nous consulter",
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 50,
+    isNew: true,
+  },
+  {
+    title: "Terrain avec vue sur mer",
+    type: "Terrain",
+    image: "https://picsum.photos/600/400?random=7",
+    hint: "land sea view",
+    price: "35 000 000 FCFA",
+    area: 250,
+    isNew: false,
+  },
+    {
+    title: "Maison familiale à Ouakam",
+    type: "Maison",
+    image: "https://picsum.photos/600/400?random=8",
+    hint: "family house ouakam",
+    price: "Nous consulter",
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 180,
+    isNew: false,
+  },
 ];
 
-export function Properties() {
+export function PropertiesList() {
   return (
-    <section id="properties" className="py-16 sm:py-24 bg-secondary">
+    <section id="properties-list" className="py-16 sm:py-24">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Nos Propriétés et Terrains à la Une
+            Toutes Nos Propriétés et Terrains
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/60">
-            Un aperçu de nos meilleures opportunités pour votre projet de vie.
+            Découvrez l'ensemble de nos offres, pensées pour chaque projet de vie.
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {properties.map((prop, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+              <div key={index} className="p-1">
+                 <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                     <CardHeader className="p-0 relative">
                       <Image
                         src={prop.image}
@@ -114,17 +144,8 @@ export function Properties() {
                       <Button variant="outline">Voir plus</Button>
                     </CardFooter>
                   </Card>
-                </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-1rem] sm:left-[-2rem] top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-[-1rem] sm:right-[-2rem] top-1/2 -translate-y-1/2" />
-        </Carousel>
-        <div className="text-center mt-12">
-            <Button asChild size="lg">
-                <Link href="/properties">Voir toutes nos propriétés</Link>
-            </Button>
         </div>
       </div>
     </section>
