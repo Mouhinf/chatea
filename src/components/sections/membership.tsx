@@ -24,20 +24,16 @@ export function Membership() {
               Rejoindre notre coopérative, c'est investir dans un projet de vie qui a du sens. En devenant membre, vous bénéficiez de nombreux avantages tout en contribuant à un modèle d'habitat plus juste et durable.
             </p>
             <ul className="mt-8 space-y-4">
-              {benefits.map((benefit, index) => (
+              {benefits.slice(0,3).map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span className="text-foreground/90">{benefit}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 p-6 rounded-lg bg-secondary">
-                <h4 className="font-semibold text-lg">Frais et parts sociales</h4>
-                <p className="text-sm text-foreground/70 mt-2">L'adhésion implique l'acquisition de parts sociales, qui constituent votre investissement dans le patrimoine commun de la coopérative. Les frais d'adhésion uniques s'élèvent à 250€. Contactez-nous pour en savoir plus sur les modalités.</p>
-            </div>
             <Button asChild size="lg" className="mt-10 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="#contact">
-                Nous Rejoindre
+              <Link href="/membership">
+                En savoir plus sur l'adhésion
               </Link>
             </Button>
           </div>
