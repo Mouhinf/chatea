@@ -22,7 +22,7 @@ export function Footer() {
           <div className="flex flex-col items-start space-y-4">
             <Logo />
             <p className="text-sm text-foreground/60">
-              Bâtir une communauté durable, une maison à la fois.
+              La coopérative qui rapproche votre foyer.
             </p>
           </div>
 
@@ -39,8 +39,8 @@ export function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" />123 Rue de la Coop, Paris, France</li>
-                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" />+33 1 23 45 67 89</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" />Rue 15 Vincent, Dakar Plateau</li>
+                <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" />+221 77 512 74 92</li>
                 <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" />contact@chatea.coop</li>
               </ul>
             </div>

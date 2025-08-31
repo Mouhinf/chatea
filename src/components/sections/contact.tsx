@@ -29,14 +29,15 @@ export function Contact() {
                         <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h4 className="font-semibold text-foreground">Adresse</h4>
-                            <p>123 Rue de la Coop, 75001 Paris, France</p>
+                            <p>Rue 15 Vincent, Dakar Plateau</p>
                         </div>
                     </div>
                     <div className="flex items-start gap-4">
                         <Phone className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h4 className="font-semibold text-foreground">Téléphone</h4>
-                            <p>+33 1 23 45 67 89</p>
+                            <p>+221 77 512 74 92</p>
+                            <p>+221 77 421 78 71</p>
                         </div>
                     </div>
                     <div className="flex items-start gap-4">

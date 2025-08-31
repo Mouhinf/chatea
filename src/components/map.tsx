@@ -11,7 +11,7 @@ export function Map() {
       <Image 
         src="https://picsum.photos/800/600"
         alt="Carte de la localisation de la coopérative"
-        data-ai-hint="city map"
+        data-ai-hint="city map dakar"
         fill
         className="object-cover opacity-50"
       />
@@ -19,7 +19,7 @@ export function Map() {
         <MapPin className="w-12 h-12 text-destructive animate-pulse" />
       </div>
       <div className="absolute bottom-4 left-4 bg-background/80 p-2 rounded-md text-sm">
-        123 Rue de la Coop, Paris
+        Rue 15 Vincent, Dakar Plateau
       </div>
     </div>
   );

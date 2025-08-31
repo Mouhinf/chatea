@@ -9,54 +9,52 @@ import { BedDouble, Bath, Ruler, Trees } from "lucide-react";
 
 const properties = [
   {
-    title: "Maison Familiale Moderne",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=1",
-    hint: "modern house",
-    price: "450 000 €",
-    bedrooms: 4,
-    bathrooms: 2,
-    area: 180,
-    isNew: true,
-  },
-  {
-    title: "Terrain Viabilisé 'Les Chênes'",
+    title: "Terrain Viabilisé à Diamniadio",
     type: "Terrain",
-    image: "https://picsum.photos/600/400?random=2",
-    hint: "land plot",
-    price: "120 000 €",
-    area: 2500,
-    isNew: false,
-  },
-  {
-    title: "Appartement T3 Centre-Ville",
-    type: "Appartement",
-    image: "https://picsum.photos/600/400?random=3",
-    hint: "apartment interior",
-    price: "280 000 €",
-    bedrooms: 2,
-    bathrooms: 1,
-    area: 75,
-    isNew: false,
-  },
-  {
-    title: "Maison de Campagne Rénovée",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=4",
-    hint: "country house",
-    price: "375 000 €",
-    bedrooms: 3,
-    bathrooms: 2,
+    image: "https://picsum.photos/600/400?random=1",
+    hint: "serviced land plot",
+    price: "15 000 000 FCFA",
     area: 150,
     isNew: true,
   },
   {
-    title: "Parcelle Forestière",
+    title: "Terrain Résidentiel à Lac Rose",
+    type: "Terrain",
+    image: "https://picsum.photos/600/400?random=2",
+    hint: "residential land",
+    price: "22 000 000 FCFA",
+    area: 200,
+    isNew: false,
+  },
+  {
+    title: "Appartement T3 à Dakar",
+    type: "Appartement",
+    image: "https://picsum.photos/600/400?random=3",
+    hint: "modern apartment dakar",
+    price: "Nous consulter",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: 100,
+    isNew: false,
+  },
+  {
+    title: "Villa 4 Chambres à Saly",
+    type: "Maison",
+    image: "https://picsum.photos/600/400?random=4",
+    hint: "villa saly senegal",
+    price: "Nous consulter",
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 225,
+    isNew: true,
+  },
+  {
+    title: "Terrain d'Avenir à Yenne",
     type: "Terrain",
     image: "https://picsum.photos/600/400?random=5",
-    hint: "forest land",
-    price: "95 000 €",
-    area: 10000,
+    hint: "land plot ocean",
+    price: "18 500 000 FCFA",
+    area: 180,
     isNew: false,
   },
 ];
@@ -103,18 +101,18 @@ export function Properties() {
                       <div className="flex flex-wrap gap-4 text-sm text-foreground/80 mt-4">
                         {prop.bedrooms && (
                           <div className="flex items-center gap-2">
-                            <BedDouble className="w-4 h-4 text-primary" />
+                            <BedDouble className="w-4 h-4 text-accent" />
                             <span>{prop.bedrooms} ch.</span>
                           </div>
                         )}
                         {prop.bathrooms && (
                           <div className="flex items-center gap-2">
-                            <Bath className="w-4 h-4 text-primary" />
+                            <Bath className="w-4 h-4 text-accent" />
                             <span>{prop.bathrooms} sdb.</span>
                           </div>
                         )}
                         <div className="flex items-center gap-2">
-                          {prop.type === 'Terrain' ? <Trees className="w-4 h-4 text-primary" /> : <Ruler className="w-4 h-4 text-primary" />}
+                          {prop.type === 'Terrain' ? <Trees className="w-4 h-4 text-accent" /> : <Ruler className="w-4 h-4 text-accent" />}
                           <span>{prop.area} m²</span>
                         </div>
                       </div>
