@@ -2,7 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { History, Target, Eye, Scale, FileText, Landmark } from "lucide-react";
+import { History, Target, Eye, Scale, FileText, Landmark, Leaf, Users } from "lucide-react";
 
 export function CooperativeDetails() {
   return (
@@ -24,7 +24,7 @@ export function CooperativeDetails() {
               <CardTitle>Notre Histoire</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80">La coopérative est fondée en 2025, CHA-TEA est née de la volonté de créer une alternative durable et solidaire au marché immobilier traditionnel pour les Sénégalais et immigrés.</p>
+              <p className="text-foreground/80">Fondée en 2025, CHA-TEA est née d'une ambition commune : offrir aux travailleurs immigrés et aux Sénégalais une voie d'accès à la propriété sécurisée et communautaire. Face aux défis du marché immobilier, nous avons créé un modèle solidaire pour construire un avenir stable.</p>
             </CardContent>
           </Card>
           <Card className="bg-card/50">
@@ -33,7 +33,7 @@ export function CooperativeDetails() {
               <CardTitle>Notre Mission</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80">Faciliter l'accès au logement et proposer des terrains de 150 à 225 m² pour des projets immobiliers destinés aux Sénégalais et immigrés.</p>
+              <p className="text-foreground/80">Nous nous engageons à faciliter l'accès à un logement décent et abordable. Nous proposons des terrains viabilisés de 150 à 225 m² et accompagnons nos membres dans la réalisation de leurs projets immobiliers, en favorisant l'entraide et la mutualisation des ressources.</p>
             </CardContent>
           </Card>
           <Card className="bg-card/50">
@@ -42,45 +42,72 @@ export function CooperativeDetails() {
               <CardTitle>Notre Vision</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80">Devenir un modèle de référence en matière d'habitat coopératif, en alliant innovation sociale, respect de l'environnement et bien-être des résidents.</p>
+              <p className="text-foreground/80">Devenir un modèle de référence en matière d'habitat coopératif au Sénégal, en alliant innovation sociale, respect de l'environnement et épanouissement de nos membres. Nous aspirons à bâtir des quartiers durables et inclusifs où il fait bon vivre.</p>
             </CardContent>
           </Card>
         </div>
-
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-6">Gouvernance et Statuts</h3>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-lg">
-                <div className="flex items-center gap-3">
-                    <Landmark className="w-5 h-5" /> Gouvernance Démocratique
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-foreground/80 pl-8">
-                Notre coopérative fonctionne sur le principe "un membre, une voix". Toutes les décisions importantes sont prises collectivement lors des assemblées générales, assurant une gestion transparente et équitable. Le conseil d'administration est élu par les membres et pour les membres.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-lg">
-                <div className="flex items-center gap-3">
-                    <FileText className="w-5 h-5" /> Statuts de la Coopérative
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-foreground/80 pl-8">
-                Nos statuts définissent les règles de fonctionnement, les droits et devoirs des membres, ainsi que les modalités d'acquisition et de gestion des biens. Ils sont le garant de notre projet collectif et peuvent être consultés sur demande par tous les membres.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-lg">
-                 <div className="flex items-center gap-3">
-                    <Scale className="w-5 h-5" /> Principes et Valeurs
-                 </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-foreground/80 pl-8">
-                Nous adhérons aux principes coopératifs internationaux : adhésion volontaire et ouverte, pouvoir démocratique exercé par les membres, participation économique, autonomie et indépendance, éducation, formation et information, coopération entre les coopératives et engagement envers la communauté.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+        
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-6">Gouvernance et Statuts</h3>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-lg">
+                  <div className="flex items-center gap-3">
+                      <Landmark className="w-5 h-5" /> Gouvernance Démocratique
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pl-8">
+                  Notre coopérative fonctionne sur le principe "un membre, une voix". Toutes les décisions importantes sont prises collectivement lors des assemblées générales, assurant une gestion transparente et équitable. Le conseil d'administration, élu par les membres, est le garant de la bonne gestion et de l'orientation stratégique de la coopérative.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-lg">
+                  <div className="flex items-center gap-3">
+                      <FileText className="w-5 h-5" /> Statuts de la Coopérative
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pl-8">
+                  Nos statuts, conformes à la législation en vigueur, définissent les règles de fonctionnement, les droits et devoirs des membres, ainsi que les modalités d'acquisition et de gestion des biens. Ils sont le fondement de notre projet collectif et peuvent être consultés sur demande par tous les membres.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-lg">
+                   <div className="flex items-center gap-3">
+                      <Scale className="w-5 h-5" /> Principes et Valeurs
+                   </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pl-8">
+                  Nous adhérons aux principes coopératifs internationaux : adhésion volontaire, pouvoir démocratique, participation économique, autonomie, éducation, coopération entre les coopératives et engagement envers la communauté. La solidarité, l'équité et la responsabilité sont au cœur de notre action.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+           <div>
+            <h3 className="text-2xl font-bold text-center mb-6">Nos Engagements</h3>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-lg">
+                  <div className="flex items-center gap-3">
+                      <Leaf className="w-5 h-5" /> Engagement Écologique
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pl-8">
+                  Nous encourageons les pratiques de construction durable et l'utilisation de matériaux locaux pour minimiser notre empreinte écologique. Nos projets intègrent des espaces verts et des solutions pour la gestion de l'eau et des déchets, créant ainsi un cadre de vie sain et respectueux de l'environnement.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-lg">
+                  <div className="flex items-center gap-3">
+                      <Users className="w-5 h-5" /> Engagement Social
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pl-8">
+                  Au-delà du logement, CHA-TEA vise à créer du lien social. Nous organisons des activités et mettons en place des services partagés pour renforcer la cohésion et l'entraide au sein de la communauté. Nous favorisons l'inclusion et la participation de tous les membres à la vie de la coopérative.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
