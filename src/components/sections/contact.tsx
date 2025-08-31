@@ -21,7 +21,7 @@ export function Contact() {
             <ContactForm />
           </div>
 
-          <div className="space-y-8">
+          <div className="flex flex-col gap-8">
             <div>
                 <h3 className="text-2xl font-semibold mb-4">Nos Coordonnées</h3>
                 <div className="space-y-4 text-foreground/80">
@@ -49,7 +49,7 @@ export function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="h-80 lg:h-full w-full rounded-lg overflow-hidden shadow-lg">
+            <div className="h-80 w-full rounded-lg overflow-hidden shadow-lg">
               <Map />
             </div>
           </div>
