@@ -22,7 +22,7 @@ export function About() {
               <CardTitle>Notre Histoire</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80">Fondée en 2020, CHA-TEA est née de la volonté de créer une alternative durable et solidaire au marché immobilier traditionnel pour les Sénégalais et immigrés.</p>
+              <p className="text-foreground/80">La coopérative est fondée en 2025</p>
             </CardContent>
           </Card>
           <Card className="bg-card/50">
