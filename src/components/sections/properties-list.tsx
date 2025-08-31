@@ -28,10 +28,10 @@ export function PropertiesList() {
             </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {properties_data.map((prop) => (
               <div key={prop.id} className="p-1">
-                 <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+                 <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300 text-left">
                     <CardHeader className="p-0 relative">
                       <Image
                         src={prop.image}
