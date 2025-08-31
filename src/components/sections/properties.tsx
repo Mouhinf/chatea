@@ -7,49 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BedDouble, Bath, Ruler, Trees } from "lucide-react";
 import Link from "next/link";
+import { properties_data } from "@/lib/properties-data";
 
-const properties = [
-  {
-    title: "Terrain Viabilisé à Diamniadio",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=1",
-    hint: "serviced land plot",
-    price: "15 000 000 FCFA",
-    area: 150,
-    isNew: true,
-  },
-  {
-    title: "Appartement T3 à Dakar",
-    type: "Appartement",
-    image: "https://picsum.photos/600/400?random=3",
-    hint: "modern apartment dakar",
-    price: "Nous consulter",
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 100,
-    isNew: false,
-  },
-  {
-    title: "Villa 4 Chambres à Saly",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=4",
-    hint: "villa saly senegal",
-    price: "Nous consulter",
-    bedrooms: 4,
-    bathrooms: 3,
-    area: 225,
-    isNew: true,
-  },
-  {
-    title: "Terrain d'Avenir à Yenne",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=5",
-    hint: "land plot ocean",
-    price: "18 500 000 FCFA",
-    area: 180,
-    isNew: false,
-  },
-];
+const featured_properties = properties_data.filter(p => p.isNew).slice(0, 4);
 
 export function Properties() {
   return (
@@ -72,8 +32,8 @@ export function Properties() {
           className="w-full"
         >
           <CarouselContent>
-            {properties.map((prop, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            {featured_properties.map((prop) => (
+              <CarouselItem key={prop.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                     <CardHeader className="p-0 relative">
@@ -111,7 +71,9 @@ export function Properties() {
                     </CardContent>
                     <CardFooter className="p-6 pt-0 flex justify-between items-center">
                       <p className="text-xl font-bold text-primary">{prop.price}</p>
-                      <Button variant="outline">Voir plus</Button>
+                      <Button asChild variant="outline">
+                        <Link href={`/properties/${prop.id}`}>Voir plus</Link>
+                      </Button>
                     </CardFooter>
                   </Card>
                 </div>

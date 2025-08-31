@@ -1,135 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BedDouble, Bath, Ruler, Trees } from "lucide-react";
+import Link from "next/link";
+import { properties_data } from "@/lib/properties-data";
 
-const properties = [
-  {
-    title: "Terrain Viabilisé à Diamniadio",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=1",
-    hint: "serviced land plot",
-    price: "15 000 000 FCFA",
-    area: 150,
-    isNew: true,
-  },
-  {
-    title: "Terrain Résidentiel à Lac Rose",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=2",
-    hint: "residential land",
-    price: "22 000 000 FCFA",
-    area: 200,
-    isNew: false,
-  },
-  {
-    title: "Appartement T3 à Dakar",
-    type: "Appartement",
-    image: "https://picsum.photos/600/400?random=3",
-    hint: "modern apartment dakar",
-    price: "Nous consulter",
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 100,
-    isNew: false,
-  },
-  {
-    title: "Villa 4 Chambres à Saly",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=4",
-    hint: "villa saly senegal",
-    price: "Nous consulter",
-    bedrooms: 4,
-    bathrooms: 3,
-    area: 225,
-    isNew: true,
-  },
-  {
-    title: "Terrain d'Avenir à Yenne",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=5",
-    hint: "land plot ocean",
-    price: "18 500 000 FCFA",
-    area: 180,
-    isNew: false,
-  },
-   {
-    title: "Studio moderne à Ngor",
-    type: "Appartement",
-    image: "https://picsum.photos/600/400?random=6",
-    hint: "modern studio ngor",
-    price: "Nous consulter",
-    bedrooms: 1,
-    bathrooms: 1,
-    area: 50,
-    isNew: true,
-  },
-  {
-    title: "Terrain avec vue sur mer",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=7",
-    hint: "land sea view",
-    price: "35 000 000 FCFA",
-    area: 250,
-    isNew: false,
-  },
-    {
-    title: "Maison familiale à Ouakam",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=8",
-    hint: "family house ouakam",
-    price: "Nous consulter",
-    bedrooms: 3,
-    bathrooms: 2,
-    area: 180,
-    isNew: false,
-  },
-  {
-    title: "Duplex de standing à Mermoz",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=9",
-    hint: "duplex house mermoz",
-    price: "Nous consulter",
-    bedrooms: 5,
-    bathrooms: 4,
-    area: 300,
-    isNew: true,
-  },
-  {
-    title: "Terrain commercial à Sindia",
-    type: "Terrain",
-    image: "https://picsum.photos/600/400?random=10",
-    hint: "commercial land",
-    price: "45 000 000 FCFA",
-    area: 500,
-    isNew: false,
-  },
-  {
-    title: "Appartement F2 aux Almadies",
-    type: "Appartement",
-    image: "https://picsum.photos/600/400?random=11",
-    hint: "apartment almadies",
-    price: "Nous consulter",
-    bedrooms: 1,
-    bathrooms: 1,
-    area: 80,
-    isNew: false,
-  },
-  {
-    title: "Maison à rénover à la Médina",
-    type: "Maison",
-    image: "https://picsum.photos/600/400?random=12",
-    hint: "house renovate medina",
-    price: "Nous consulter",
-    bedrooms: 3,
-    bathrooms: 1,
-    area: 120,
-    isNew: false,
-  },
-];
 
 export function PropertiesList() {
   return (
@@ -145,8 +23,8 @@ export function PropertiesList() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {properties.map((prop, index) => (
-              <div key={index} className="p-1">
+            {properties_data.map((prop) => (
+              <div key={prop.id} className="p-1">
                  <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                     <CardHeader className="p-0 relative">
                       <Image
@@ -183,7 +61,9 @@ export function PropertiesList() {
                     </CardContent>
                     <CardFooter className="p-6 pt-0 flex justify-between items-center">
                       <p className="text-xl font-bold text-primary">{prop.price}</p>
-                      <Button variant="outline">Voir plus</Button>
+                       <Button asChild variant="outline">
+                        <Link href={`/properties/${prop.id}`}>Voir plus</Link>
+                      </Button>
                     </CardFooter>
                   </Card>
               </div>
