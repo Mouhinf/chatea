@@ -30,10 +30,10 @@ export function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Navigation</h3>
               <ul className="space-y-2">
-                <li><Link href="#about" className="text-sm text-foreground/60 hover:text-foreground">Coopérative</Link></li>
-                <li><Link href="#properties" className="text-sm text-foreground/60 hover:text-foreground">Propriétés</Link></li>
-                <li><Link href="#membership" className="text-sm text-foreground/60 hover:text-foreground">Adhésion</Link></li>
-                <li><Link href="#contact" className="text-sm text-foreground/60 hover:text-foreground">Contact</Link></li>
+                <li><span className="text-sm text-foreground/60">Coopérative</span></li>
+                <li><span className="text-sm text-foreground/60">Propriétés</span></li>
+                <li><span className="text-sm text-foreground/60">Adhésion</span></li>
+                <li><span className="text-sm text-foreground/60">Contact</span></li>
               </ul>
             </div>
             <div>
