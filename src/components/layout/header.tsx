@@ -18,10 +18,12 @@ import {
 import { Logo } from "@/components/logo";
 
 const navLinks = [
-  { href: "/cooperative", label: "Coopérative" },
-  { href: "/properties", label: "Propriétés" },
-  { href: "/membership", label: "Adhésion" },
-  { href: "/contact", label: "Contact" },
+    { href: "/", label: "Accueil" },
+    { href: "/#about", label: "À propos", onHome: true },
+    { href: "/cooperative", label: "Coopérative" },
+    { href: "/properties", label: "Propriétés" },
+    { href: "/membership", label: "Adhésion" },
+    { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -29,10 +31,20 @@ export function Header() {
   const pathname = usePathname();
 
   const getHref = (href: string) => {
-    if (href.startsWith('/#')) {
-        return pathname === '/' ? href.slice(1) : href;
+    if (pathname === '/' && href.includes('/#')) {
+        return href.replace('/#', '#');
+    }
+    if(pathname !== '/' && href.includes('/#')){
+        return `/${href.slice(2)}`;
     }
     return href;
+  }
+
+  const getNavLinks = () => {
+      if (pathname === '/') {
+          return navLinks.filter(l => l.href !== '/cooperative');
+      }
+      return navLinks.filter(l => !l.onHome);
   }
 
   return (
@@ -55,11 +67,13 @@ export function Header() {
               <div className="p-4">
                 <Logo />
                 <div className="mt-8 flex flex-col space-y-4">
-                  {navLinks.map((link) => (
+                  {getNavLinks().map((link) => (
                     <SheetClose asChild key={link.href}>
                       <Link
                         href={getHref(link.href)}
-                        className="text-lg font-medium text-foreground hover:text-primary"
+                        className={cn("text-lg font-medium text-foreground hover:text-primary", {
+                            "text-primary": pathname === link.href
+                        })}
                       >
                         {link.label}
                       </Link>
@@ -75,11 +89,13 @@ export function Header() {
             {/* You can add a search bar here if needed */}
           </div>
           <nav className="hidden md:flex md:items-center md:gap-6 text-sm">
-            {navLinks.map((link) => (
+            {getNavLinks().map((link) => (
               <Link
                 key={link.href}
                 href={getHref(link.href)}
-                className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+                className={cn("font-medium text-foreground/60 transition-colors hover:text-foreground/80", {
+                    "text-primary": pathname === link.href,
+                })}
               >
                 {link.label}
               </Link>
