@@ -1,32 +1,23 @@
 // As we cannot add new dependencies, this component acts as a placeholder
 // for the interactive map requested by the user.
 // It gives the visual impression of a map without the need for @vis.gl/react-google-maps.
-
-import Image from 'next/image';
-import { MapPin } from 'lucide-react';
-import Link from 'next/link';
+// An iframe is used to embed Google Maps.
 
 export function Map() {
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3847702951933!2d-17.43673288864278!3d14.670216575199464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172551e138a39%3A0x6851f5ac8eb44040!2sRue%2015%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1722426861427!5m2!1sfr!2ssn";
+
   return (
-    <Link href="https://maps.app.goo.gl/Xof5KBNumodChyTY7" target="_blank" rel="noopener noreferrer" className="block w-full h-full group">
-      <div className="relative w-full h-full bg-secondary overflow-hidden rounded-lg">
-        <Image 
-          src="https://picsum.photos/800/600"
-          alt="Carte de la localisation de la coopérative"
-          data-ai-hint="city map dakar"
-          fill
-          className="object-cover opacity-50 group-hover:opacity-60 transition-opacity"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-          <div className="flex flex-col items-center text-center text-white">
-            <MapPin className="w-12 h-12 text-destructive drop-shadow-lg" />
-            <p className="mt-2 font-semibold drop-shadow-lg">Afficher sur Google Maps</p>
-          </div>
-        </div>
-        <div className="absolute bottom-4 left-4 bg-background/80 p-2 rounded-md text-sm shadow-md">
-          Rue 15 Vincent, Dakar Plateau
-        </div>
-      </div>
-    </Link>
+    <div className="w-full h-full">
+      <iframe
+        src={mapUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen={false}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Map de Rue 15 Vincent, Dakar Plateau"
+      ></iframe>
+    </div>
   );
 }
