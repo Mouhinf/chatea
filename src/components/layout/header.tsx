@@ -21,7 +21,7 @@ const navLinks = [
   { href: "/cooperative", label: "Coopérative" },
   { href: "/properties", label: "Propriétés" },
   { href: "/membership", label: "Adhésion" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
