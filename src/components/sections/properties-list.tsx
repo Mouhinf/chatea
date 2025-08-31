@@ -22,6 +22,12 @@ export function PropertiesList() {
           </p>
         </div>
 
+        <div className="text-center mb-12 max-w-4xl mx-auto">
+            <p className="text-foreground/80">
+                Que vous cherchiez à construire la maison de vos rêves sur un terrain viabilisé, à investir dans une parcelle d'avenir, ou à trouver l'appartement ou la maison idéale pour votre famille, CHA-TEA vous accompagne. Chaque bien est sélectionné avec soin pour répondre aux exigences de notre communauté, en alliant qualité, emplacement stratégique et potentiel de développement. Explorez nos offres ci-dessous et trouvez l'opportunité qui vous correspond.
+            </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {properties_data.map((prop) => (
               <div key={prop.id} className="p-1">
