@@ -4,6 +4,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { usePathname } from 'next/navigation'
+
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -16,14 +18,22 @@ import {
 import { Logo } from "@/components/logo";
 
 const navLinks = [
-  { href: "#about", label: "Coopérative" },
-  { href: "#properties", label: "Propriétés" },
-  { href: "#membership", label: "Adhésion" },
-  { href: "#contact", label: "Contact" },
+  { href: "/cooperative", label: "Coopérative" },
+  { href: "/#properties", label: "Propriétés" },
+  { href: "/#membership", label: "Adhésion" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  const getHref = (href: string) => {
+    if (href.startsWith('/#')) {
+        return pathname === '/' ? href.slice(1) : href;
+    }
+    return href;
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -48,7 +58,7 @@ export function Header() {
                   {navLinks.map((link) => (
                     <SheetClose asChild key={link.href}>
                       <Link
-                        href={link.href}
+                        href={getHref(link.href)}
                         className="text-lg font-medium text-foreground hover:text-primary"
                       >
                         {link.label}
@@ -68,7 +78,7 @@ export function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={getHref(link.href)}
                 className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
               >
                 {link.label}
