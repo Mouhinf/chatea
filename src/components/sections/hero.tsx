@@ -19,7 +19,7 @@ export function Hero() {
           Votre Avenir Commence Ici.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-neutral-200 sm:text-xl">
-          CHA-TEA Coop : Construisons ensemble une communauté d'habitation durable et abordable.
+          CHA-TEA : Construisons ensemble une communauté d'habitation durable et abordable.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">

@@ -8,10 +8,10 @@ export function About() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Découvrez <span className="text-primary">CHA-TEA Coop</span>
+            Découvrez <span className="text-primary">CHA-TEA</span>
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/60">
-            Plus qu'un simple logement, une véritable communauté.
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/60">
+            CHA-TEA : <span className="font-semibold">C</span>oopérative d'<span className="font-semibold">Ha</span>bitat des <span className="font-semibold">T</span>ravailleurs <span className="font-semibold">I</span>mmigrés d'<span className="font-semibold">E</span>urope et d'<span className="font-semibold">A</span>mérique. Plus qu'un simple logement, une véritable communauté.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export function About() {
               <CardTitle>Notre Histoire</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/80">Fondée en 2020, CHA-TEA Coop est née de la volonté de créer une alternative durable et solidaire au marché immobilier traditionnel.</p>
+              <p className="text-foreground/80">Fondée en 2020, CHA-TEA est née de la volonté de créer une alternative durable et solidaire au marché immobilier traditionnel.</p>
             </CardContent>
           </Card>
           <Card className="bg-card/50">

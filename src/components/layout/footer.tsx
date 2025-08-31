@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-foreground/60">
-          <p>&copy; {new Date().getFullYear()} CHA-TEA Coop. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} CHA-TEA. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
