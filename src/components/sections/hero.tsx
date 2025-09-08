@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative h-[calc(100vh-3.5rem)] w-full">
       <Image
-        src="https://picsum.photos/1920/1080"
+        src="/maison.jpg"
         alt="Vue aérienne d'un quartier résidentiel à Dakar"
         data-ai-hint="residential neighborhood dakar"
         fill

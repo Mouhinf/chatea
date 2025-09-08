@@ -41,7 +41,7 @@ export const properties_data = [
       id: "saly-01",
       title: "Villa 4 Chambres à Saly",
       type: "Maison",
-      image: "https://picsum.photos/1200/800?random=4",
+      image: "/maison1.png",
       hint: "villa saly senegal",
       price: "Nous consulter",
       bedrooms: 4,
